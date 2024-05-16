@@ -1,0 +1,21 @@
+1.Find the highest, lowest, sum, and average salary of all employees. Label the columns Maximum, Minimum, Sum, and Average, respectively. Round your results to the nearest whole number. 
+
+SELECT ROUND(MAX(salary),0) "Maximum",
+ROUND(MIN(salary),0) "Minimum",
+ROUND(SUM(salary),0) "Sum",
+ROUND(AVG(salary),0) "Average"
+FROM employees;
+
+2.Modify the above query to display the minimum, maximum, sum, and average salary for each job type.
+
+SELECT job_id, ROUND(MAX(salary),0) "Maximum",
+ROUND(MIN(salary),0) "Minimum",
+ROUND(SUM(salary),0) "Sum",
+ROUND(AVG(salary),0) "Average"
+FROM employees
+GROUP BY job_id;
+
+8.Write a query that displays the difference between the highest and lowest salaries. Label the column DIFFERENCE. 
+
+SELECT MAX(salary) - MIN(salary) DIFFERENCE
+FROM employees;
